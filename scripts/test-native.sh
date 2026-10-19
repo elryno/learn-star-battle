@@ -22,14 +22,30 @@ mkdir -p "$output"
 output=$(realpath "$output")
 runtime=$XDG_RUNTIME_DIR
 export GDK_BACKEND=x11 GTK_A11Y=none GSK_RENDERER=cairo
-Xvfb -displayfd 3 -screen 0 1400x1100x24 -nolisten tcp 3>"$runtime/display" >"$runtime/xvfb.log" 2>&1 &
+Xvfb -displayfd 3 -screen 0 1400x1100x24 -nolisten tcp -noreset 3>"$runtime/display" >"$output/xvfb.log" 2>&1 &
 xvfb_pid=$!
 trap 'kill "$xvfb_pid" 2>/dev/null || true' EXIT
-for _ in {1..50}; do
-    [[ -s "$runtime/display" ]] && break
+display_ready=0
+for _ in {1..100}; do
+    if ! kill -0 "$xvfb_pid" 2>/dev/null; then
+        cat "$output/xvfb.log"
+        printf 'Xvfb exited before the test display was ready.\n' >&2
+        exit 1
+    fi
+    if [[ -s "$runtime/display" ]]; then
+        export DISPLAY=":$(cat "$runtime/display")"
+        if xdotool getdisplaygeometry >/dev/null 2>&1; then
+            display_ready=1
+            break
+        fi
+    fi
     sleep 0.1
 done
-export DISPLAY=":$(cat "$runtime/display")"
+if [[ "$display_ready" != 1 ]]; then
+    cat "$output/xvfb.log"
+    printf 'Xvfb did not provide a usable test display within 10 seconds.\n' >&2
+    exit 1
+fi
 scenarios=("$@")
 if [[ ${#scenarios[@]} -eq 0 ]]; then
     scenarios=(teaching teaching-compact teaching-narrow teaching-dark layout compact narrow hint timeout preview counting correction correction-preview retained-hint retained-correction auto drag errors error-toggle new-puzzle solved import source-align source-align-compact source-align-narrow help about external)
