@@ -1,0 +1,39 @@
+name: Verify
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      CARGO_TERM_COLOR: always
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install native build and test dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential pkg-config libgtk-4-dev libadwaita-1-dev libwayland-dev libwayland-bin xvfb xauth xdotool xclip imagemagick dbus-x11 ripgrep desktop-file-utils sway wl-clipboard wtype grim
+      - name: Use the minimum supported Rust version
+        run: |
+          rustup toolchain install 1.87.0 --profile minimal --component rustfmt --component clippy
+          rustup override set 1.87.0
+      - name: Verify
+        run: bash scripts/check.sh
+      - name: Preserve native test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-test-evidence
+          path: |
+            artifacts/native-review/*.log
+            artifacts/native-review/*.txt
+            artifacts/native-review/*.png
+            artifacts/wayland-review/*.log
+            artifacts/wayland-review/*.txt
+            artifacts/wayland-review/*.png
+          if-no-files-found: ignore
+          retention-days: 7

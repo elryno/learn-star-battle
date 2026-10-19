@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Learn Star Battle
+Comment=Play Star Battle with screenshot import and guided hints
+Exec=@EXEC@ %f
+Icon=io.github.starbattle.Solver
+Terminal=false
+StartupNotify=true
+Categories=Game;LogicGame;
+Keywords=stars;puzzle;logic;learn;
+MimeType=image/png;image/jpeg;

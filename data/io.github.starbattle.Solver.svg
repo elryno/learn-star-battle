@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="12" y="16" width="104" height="104" rx="18" fill="#3d3846"/>
+  <rect x="12" y="8" width="104" height="104" rx="18" fill="#f6f5f4"/>
+  <clipPath id="board"><rect x="20" y="16" width="88" height="88" rx="11"/></clipPath>
+  <g clip-path="url(#board)">
+    <path d="M20 16h88v88H20z" fill="#d6e9be"/>
+    <path d="M20 16h44v66H20z" fill="#e3cff7"/>
+    <path d="M64 16h44v44H64z" fill="#bcebec"/>
+    <path d="M20 38h88M20 60h88M20 82h88M42 16v88M64 16v88M86 16v88" fill="none" stroke="#3d3846" stroke-opacity=".18" stroke-width="1"/>
+    <path d="M64 16v66H20M64 60h44" fill="none" stroke="#3d3846" stroke-width="2.5"/>
+  </g>
+  <rect x="20" y="16" width="88" height="88" rx="11" fill="none" stroke="#3d3846" stroke-width="2.5"/>
+  <path id="star" d="m42 25 4.2 8.6 9.5 1.4-6.8 6.7 1.6 9.4-8.5-4.4-8.5 4.4 1.6-9.4-6.8-6.7 9.5-1.4z" fill="#1f3333"/>
+  <use href="#star" transform="translate(44 44)"/>
+</svg>

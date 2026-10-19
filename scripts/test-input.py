@@ -16,7 +16,7 @@ app = None
 window = None
 clipboards = []
 log = (output / 'external-app.log').open('w')
-env = dict(os.environ, XDG_DATA_HOME=str(state_dir), STAR_BATTLE_CAPTURE_PATH=str(output / 'external.png'), STAR_BATTLE_CAPTURE_SCENARIO='external')
+env = dict(os.environ, XDG_DATA_HOME=str(state_dir), STAR_BATTLE_CAPTURE_PATH=str(output / 'external.png'), STAR_BATTLE_CAPTURE_SCENARIO='external', STAR_BATTLE_TEST_UNIQUE='1')
 env.pop('STAR_BATTLE_TEST_BOARD', None)
 
 def run(*args):
@@ -88,9 +88,29 @@ def close():
 def saved():
     return json.loads((state_dir / 'starbattle/game.json').read_text())
 
+def open_files(*files):
+    # The secondary process must forward its file arguments and exit; the
+    # observation remains owned by the original process and original window.
+    secondary_env = {k: v for k, v in env.items() if not k.startswith('STAR_BATTLE_')}
+    result = sp.run([str(root / 'target/debug/star-battle-solver'), *map(str, files)], env=secondary_env, stdout=log, stderr=log, timeout=5)
+    assert result.returncode == 0
+    assert app.poll() is None
+
 try:
     start()
     assert read()['board'] is None
+    open_files(root / 'tests/fixtures/10x10-daily-page.png')
+    wait(lambda s: s.get('review') and not s['busy'], 'file forwarded from second instance')
+    forwarded = read()['board']
+    open_files(root / 'tests/fixtures/5x5-partial.jpg')
+    key('Escape')  # Opening during review is rejected without replacing it.
+    assert read()['board'] == forwarded
+    click('cancel')
+    open_files(root / 'tests/fixtures/5x5-partial.jpg', root / 'tests/fixtures/8x8-empty.jpg')
+    key('Escape')
+    assert read()['board'] is None
+    open_files(root / 'tests/fixtures/missing.png')
+    wait(lambda s: not s['busy'] and bool(s['text']), 'missing file error')
     clipboard(b'not an image', 'UTF8_STRING')
     key('ctrl+v')
     wait(lambda s: not s.get('busy', True) and 'clipboard' in s.get('text', ''), 'invalid clipboard error')
@@ -127,6 +147,11 @@ try:
     wait(lambda s: s.get('board') is not None and not s['review'], 'accept import')
     assert read()['board'] == original
     assert saved()['board'] == original
+    open_files(root / 'tests/fixtures/5x5-partial.jpg')
+    wait(lambda s: s.get('review') and not s['busy'] and s['board']['size'] == 5, 'review new file over an existing puzzle')
+    assert saved()['board'] == original
+    click('cancel')
+    assert read()['board'] == original
     key('ctrl+v')
     assert not read()['review'] and read()['board'] == original
     mark(0, 'Cross')

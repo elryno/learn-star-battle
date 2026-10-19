@@ -197,7 +197,7 @@ fn set_advice_text(label: &gtk::Label, text: &str, size: usize) {
 }
 
 impl Desktop {
-    pub fn open(app: &adw::Application, path: Option<PathBuf>) {
+    pub fn open(app: &adw::Application) -> Rc<Self> {
         let window = adw::ApplicationWindow::builder()
             .application(app)
             .title("Learn Star Battle")
@@ -485,14 +485,48 @@ impl Desktop {
         desktop.connect(app);
         desktop.refresh();
         desktop.window.present();
-        if let Some(path) = path {
-            desktop.import(Some(path));
-        }
         #[cfg(feature = "capture")]
         desktop.validation_capture();
         // Keep the controller alive for this application's lifetime. Callbacks
         // otherwise hold Weak references, including the background-job poller.
-        app.connect_shutdown(move |_| desktop.persist());
+        let save = desktop.clone();
+        app.connect_shutdown(move |_| save.persist());
+        desktop
+    }
+
+    pub fn present(&self) {
+        self.window.present();
+    }
+
+    pub fn open_files(self: &Rc<Self>, files: &[gio::File]) {
+        let state = self.state.borrow();
+        let problem = if files.len() != 1 {
+            Some("Open one screenshot at a time.")
+        } else if state.busy || state.review.is_some() {
+            Some(
+                "Finish the current operation or cancel the import before opening another screenshot.",
+            )
+        } else if files[0].path().is_none() {
+            Some("Save the screenshot to your computer before opening it.")
+        } else {
+            None
+        };
+        drop(state);
+        if let Some(message) = problem {
+            let dialog = adw::MessageDialog::new(
+                Some(&self.window),
+                Some("Cannot Open Screenshot"),
+                Some(message),
+            );
+            dialog.add_response("close", "_Close");
+            dialog.set_close_response("close");
+            dialog.set_default_response(Some("close"));
+            dialog.present();
+        } else {
+            // Review is reversible: the saved game is replaced only when the
+            // player accepts this import. Cancel restores the existing puzzle.
+            self.import(files[0].path());
+        }
     }
 
     fn connect(self: &Rc<Self>, app: &adw::Application) {
@@ -1004,7 +1038,7 @@ impl Desktop {
             .transient_for(&self.window)
             .modal(true)
             .application_name("Learn Star Battle")
-            .application_icon("applications-games-symbolic")
+            .application_icon("io.github.starbattle.Solver")
             .version(env!("CARGO_PKG_VERSION"))
             .comments("Play Star Battle puzzles from screenshots, with hints that follow the current board.")
             .build()

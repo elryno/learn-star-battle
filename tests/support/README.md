@@ -1,0 +1,3 @@
+The virtual-pointer protocol XML is copied from [wlr-protocols](https://github.com/swaywm/wlr-protocols/blob/master/unstable/wlr-virtual-pointer-unstable-v1.xml), retaining its MIT copyright notice. It is used only to build the small persistent input device for the isolated Sway test desktop. Nothing in this directory is included in the application binary.
+
+Keeping the pointer connected throughout the test lets GTK receive a stable input device. Each command is acknowledged after the compositor processes it. The Python test sends real pointer events through this helper and real keyboard events through `wtype`.

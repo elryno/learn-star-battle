@@ -194,8 +194,60 @@ impl Desktop {
         };
         let mode =
             std::env::var("STAR_BATTLE_CAPTURE_SCENARIO").unwrap_or_else(|_| "import".into());
+        if mode == "clipboard" {
+            let weak = Rc::downgrade(self);
+            let mut started = false;
+            glib::timeout_add_local(Duration::from_millis(250), move || {
+                let Some(ui) = weak.upgrade() else {
+                    return glib::ControlFlow::Break;
+                };
+                if !started {
+                    if !ui.window.is_active() {
+                        return glib::ControlFlow::Continue;
+                    }
+                    eprintln!(
+                        "Clipboard receiver: {}",
+                        gtk::prelude::WidgetExt::display(&ui.window).type_().name()
+                    );
+                    ui.paste.emit_clicked();
+                    started = true;
+                    return glib::ControlFlow::Continue;
+                }
+                let state = ui.state.borrow();
+                if state.busy {
+                    return glib::ControlFlow::Continue;
+                }
+                let review = state
+                    .review
+                    .as_ref()
+                    .unwrap_or_else(|| panic!("Clipboard failed: {}", ui.message.text()));
+                let expected: Board = serde_json::from_str(include_str!(
+                    "../../tests/fixtures/10x10-daily-page.json"
+                ))
+                .unwrap();
+                assert_eq!(review.board, expected);
+                let snapshot = gtk::Snapshot::new();
+                gtk::WidgetPaintable::new(Some(&ui.window)).snapshot(
+                    &snapshot,
+                    ui.window.width() as f64,
+                    ui.window.height() as f64,
+                );
+                let node = snapshot.to_node().unwrap();
+                ui.window
+                    .renderer()
+                    .unwrap()
+                    .render_texture(&node, None)
+                    .save_to_png(PathBuf::from(&path))
+                    .unwrap();
+                eprintln!("PASS native desktop clipboard: all regions, colors and marks match");
+                drop(state);
+                ui.window.close();
+                glib::ControlFlow::Break
+            });
+            return;
+        }
         if mode == "external" {
-            // This mode is driven through real X11 mouse/keyboard events.
+            // This mode is driven through real desktop mouse/keyboard events.
             let weak = Rc::downgrade(self);
             let path = PathBuf::from(path).with_extension("json");
             glib::timeout_add_local(Duration::from_millis(100), move || {
@@ -228,6 +280,8 @@ impl Desktop {
                             name.into(),
                             serde_json::json!({
                                 "x": b.x() + b.width()/2., "y": b.y() + b.height()/2.,
+                                "width": b.width(), "height": b.height(),
+                                "allocated": widget.width() > 0 && widget.height() > 0,
                                 "visible": widget.is_mapped(), "enabled": widget.is_sensitive()
                             }),
                         );
@@ -241,6 +295,7 @@ impl Desktop {
                 let observation = serde_json::json!({
                     "widgets": widgets, "grid": grid, "board": state.board(),
                     "busy": state.busy, "review": state.review.is_some(),
+                    "source": ui.source_toggle.is_active(),
                     "text": ui.message.text().as_str(), "heading": ui.status_heading.text().as_str(),
                     "lesson": state.session.lesson_index,
                     "auto": state.session.game.auto_crosses, "errors": state.session.game.show_errors,

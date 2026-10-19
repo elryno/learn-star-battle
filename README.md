@@ -22,9 +22,19 @@ You can also open an image file on launch:
 cargo run --release --locked -- /path/to/screenshot.png
 ```
 
-The filename is read when the app starts. If the app is already running, another launch focuses its existing window; it does not import the new filename. Use **New Puzzle** and paste the screenshot in that case.
+Opening a screenshot while the app is running brings its existing window forward and opens import review. The current puzzle is kept until you choose **Start Playing**; **Cancel Import** returns to it. Finish or cancel an existing import before opening another image. Open one local screenshot at a time.
 
 The build produced in this workspace is `target/release/star-battle-solver` and can be launched directly. The Rust toolchain and development packages are only needed to build. Running the binary requires the GTK 4 and libadwaita runtime libraries (`libgtk-4-1` and `libadwaita-1-0` on Ubuntu).
+
+To install the built release, app icon, and GNOME launcher for your user:
+
+```sh
+sudo apt-get install desktop-file-utils
+cargo build --release --locked
+bash scripts/install.sh
+```
+
+Find **Learn Star Battle** in the applications overview. The launcher also accepts PNG and JPEG files through **Open With**. Installation defaults to `~/.local`; set an absolute `PREFIX` to stage it elsewhere. Rebuild and rerun the installer to update the installed copy. Installation does not change your saved puzzle or default image viewer.
 
 ## Import and play
 
@@ -80,6 +90,17 @@ The current board and undo/redo history are saved locally to `$XDG_DATA_HOME/sta
 
 ## Development
 
+The complete local check uses the same entry point as GitHub Actions:
+
+```sh
+sudo apt-get install build-essential pkg-config libgtk-4-dev libadwaita-1-dev libwayland-dev libwayland-bin xvfb xauth xdotool xclip imagemagick dbus-x11 ripgrep desktop-file-utils sway wl-clipboard wtype grim
+bash scripts/check.sh
+```
+
+It checks formatting, strict Clippy, all Rust tests, native X11 and Wayland interaction, the release build, and a staged desktop installation. Missing tools or failed scenarios fail the check. `.github/workflows/check.yml` runs it on Ubuntu 24.04 with Rust 1.87 on pushes and pull requests, and preserves native screenshots and logs. A hosted run requires this repository to be uploaded to GitHub.
+
+For just the Rust checks:
+
 ```sh
 cargo fmt --check
 cargo clippy --all-targets --all-features --locked -- -D warnings
@@ -99,6 +120,10 @@ cargo build --features capture --locked
 bash scripts/test-native.sh
 ```
 
-The runner covers native layout/teaching scenarios and real mouse, keyboard, clipboard, import correction, restart, and save-failure workflows. Results, logs, and screenshots go to `artifacts/native-review/`. Pass scenario names to run a subset (for example, `bash scripts/test-native.sh external teaching-narrow`). Ordinary builds exclude the automation module in `src/ui/capture.rs`.
+The runner covers native layout/teaching scenarios and real mouse, keyboard, clipboard, import correction, second-instance file opening, restart, and save-failure workflows. Results, logs, and screenshots go to `artifacts/native-review/`. Pass scenario names to run a subset (for example, `bash scripts/test-native.sh external teaching-narrow`). Ordinary builds exclude the automation module in `src/ui/capture.rs`.
 
-The solver oracle independently enumerates every solution for generated 5×5 positions; state-sequence tests compare 4,800 actions across all board sizes against an independent model. These supplement the example-puzzle, recognition, correction, and hint-lifetime regressions. The native input suite verifies X11; it does not certify Wayland-specific compositor or clipboard behavior.
+`bash scripts/test-wayland.sh` uses a private headless Sway compositor at 100%, 125%, 150%, and 200% scale. It checks PNG clipboard transfer, source comparison, pointer placement and dragging, undo, and a visual hint lesson through actual Wayland input. Its small virtual-pointer helper is test-only. Results and compositor screenshots go to `artifacts/wayland-review/`. The runner records GTK's known popup-remapping fallback warning on Sway; other GTK warnings fail the check. These tests do not change the desktop's display settings or clipboard, and do not certify every GNOME/Mutter fractional-scale configuration.
+
+For a manual check on your current Wayland desktop, copy `tests/fixtures/10x10-daily-page.png` as an image to the clipboard, then run `bash scripts/test-desktop-clipboard.sh`. It opens a temporary test window and compares all imported regions, colors, and marks with the known fixture. It reads the desktop clipboard and uses an isolated save directory.
+
+The solver oracle independently enumerates every solution for generated 5×5 positions. A separate cell-based checker tests 48 deterministic partial positions across 10×10 and 14×14, verifies every suggested mark by proving its opposite impossible, checks four misplaced-symbol corrections, and validates the reported multi-step trial. It does not call the production constraint/search helpers. State-sequence tests compare 4,800 actions across all board sizes against an independent model. These supplement the example-puzzle, recognition, correction, and hint-lifetime regressions.
