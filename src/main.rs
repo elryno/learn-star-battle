@@ -7,7 +7,7 @@ use std::{cell::RefCell, rc::Rc};
 fn main() -> glib::ExitCode {
     glib::set_application_name("Learn Star Battle");
     let app = adw::Application::builder()
-        .application_id("io.github.starbattle.Solver")
+        .application_id("io.github.elryno.LearnStarBattle")
         .flags(gio::ApplicationFlags::HANDLES_OPEN)
         .build();
     #[cfg(feature = "capture")]

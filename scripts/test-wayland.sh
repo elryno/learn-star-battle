@@ -28,7 +28,7 @@ seat seat0 fallback true
 seat seat0 attach *
 focus_follows_mouse no
 default_border none
-for_window [app_id="io.github.starbattle.Solver"] floating enable
+for_window [app_id="io.github.elryno.LearnStarBattle"] floating enable
 SWAY
 export WLR_BACKENDS=headless WLR_RENDERER=pixman WLR_HEADLESS_OUTPUTS=1
 export GDK_BACKEND=wayland GTK_A11Y=none GSK_RENDERER=cairo

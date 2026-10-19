@@ -36,6 +36,8 @@ bash scripts/install.sh
 
 Find **Learn Star Battle** in the applications overview. The launcher also accepts PNG and JPEG files through **Open With**. Installation defaults to `~/.local`; set an absolute `PREFIX` to stage it elsewhere. Rebuild and rerun the installer to update the installed copy. Installation does not change your saved puzzle or default image viewer.
 
+The application ID is `io.github.elryno.LearnStarBattle`. When upgrading from the previous ID, the installer replaces the old launcher and icon. The executable name and saved-game location remain unchanged.
+
 ## Import and play
 
 1. Dismiss the website's **Play** overlay. Take a screenshot containing the complete board, including its edges; surrounding page content is fine.

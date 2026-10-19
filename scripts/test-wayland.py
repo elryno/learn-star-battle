@@ -57,7 +57,7 @@ def command(text):
 
 def window_rect():
     def find(node):
-        if node.get('app_id') == 'io.github.starbattle.Solver': return node['rect']
+        if node.get('app_id') == 'io.github.elryno.LearnStarBattle': return node['rect']
         for child in node.get('nodes', []) + node.get('floating_nodes', []):
             result = find(child)
             if result: return result
@@ -123,11 +123,11 @@ try:
         app = sp.Popen([str(root / 'target/debug/star-battle-solver')], env=env, stdout=log, stderr=log)
         wait(lambda s: bool(s.get('widgets')), 'startup')
         screen = json.loads(run('swaymsg', '-r', '-t', 'get_outputs'))[0]['rect']
-        command('[app_id="io.github.starbattle.Solver"] resize set '
+        command('[app_id="io.github.elryno.LearnStarBattle"] resize set '
                 f'width {min(1040, screen["width"] - 40)} px '
                 f'height {min(740, screen["height"] - 40)} px')
-        command('[app_id="io.github.starbattle.Solver"] move position center')
-        command('[app_id="io.github.starbattle.Solver"] focus')
+        command('[app_id="io.github.elryno.LearnStarBattle"] move position center')
+        command('[app_id="io.github.elryno.LearnStarBattle"] focus')
         copy(b'not an image', 'text/plain;charset=utf-8')
         paste()
         wait(lambda s: not s.get('busy', True) and 'clipboard' in s.get('text', ''), 'nonimage clipboard')
@@ -171,7 +171,7 @@ try:
         run('grim', str(output / f'scale-{scale}.png'))
         click('apply')
         wait(lambda s: s['board']['marks'][62] == 'Cross' and not s['text'], 'apply')
-        command('[app_id="io.github.starbattle.Solver"] kill')
+        command('[app_id="io.github.elryno.LearnStarBattle"] kill')
         assert app.wait(timeout=5) == 0
         results.write(f'PASS Wayland clipboard, pointer, tutorial at {scale * 100:g}% scale\n')
         results.flush()

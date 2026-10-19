@@ -1038,7 +1038,7 @@ impl Desktop {
             .transient_for(&self.window)
             .modal(true)
             .application_name("Learn Star Battle")
-            .application_icon("io.github.starbattle.Solver")
+            .application_icon("io.github.elryno.LearnStarBattle")
             .version(env!("CARGO_PKG_VERSION"))
             .comments("Play Star Battle puzzles from screenshots, with hints that follow the current board.")
             .build()
