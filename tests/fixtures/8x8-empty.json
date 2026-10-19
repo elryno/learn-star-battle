@@ -1,0 +1,261 @@
+{
+  "url": "https://www.starbattlepuzzles.com/puzzles/size/8x8",
+  "cells": [
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 1, column 1, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 1, column 2, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 1, column 3, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 1, column 4, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 1, column 5, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 1, column 6, region 2: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 1, column 7, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 1, column 8, region 7: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 2, column 1, region 1: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 2, column 2, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 2, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 2, column 4, region 5: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 2, column 5, region 5: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 2, column 6, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 2, column 7, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 2, column 8, region 7: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 3, column 1, region 1: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 3, column 2, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 3, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 3, column 4, region 4: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 3, column 5, region 6: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 3, column 6, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 3, column 7, region 7: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 3, column 8, region 3: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 4, column 1, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 4, column 2, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 4, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 4, column 4, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 4, column 5, region 6: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 4, column 6, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 4, column 7, region 7: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 4, column 8, region 3: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 5, column 1, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 5, column 2, region 4: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 5, column 3, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 5, column 4, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 5, column 5, region 6: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 5, column 6, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 5, column 7, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 5, column 8, region 7: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 6, column 1, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 6, column 2, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 6, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 6, column 4, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 6, column 5, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 6, column 6, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 6, column 7, region 8: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 6, column 8, region 7: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 7, column 1, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 7, column 2, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 7, column 3, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 7, column 4, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 7, column 5, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 7, column 6, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 7, column 7, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 7, column 8, region 8: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 8, column 1, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 8, column 2, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 8, column 3, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 8, column 4, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 8, column 5, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 8, column 6, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 8, column 7, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 8, column 8, region 8: empty"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "url": "https://www.starbattlepuzzles.com/puzzles/size/5x5",
+  "cells": [
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 1, column 1, region 4: star"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 1, column 2, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 1, column 3, region 4: marked empty"
+    },
+    {
+      "color": "rgb(96, 41, 41)",
+      "label": "Row 1, column 4, region 5: marked empty"
+    },
+    {
+      "color": "rgb(96, 41, 41)",
+      "label": "Row 1, column 5, region 5: marked empty"
+    },
+    {
+      "color": "rgb(40, 83, 54)",
+      "label": "Row 2, column 1, region 3: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 2, column 2, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 2, column 3, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 2, column 4, region 4: marked empty"
+    },
+    {
+      "color": "rgb(96, 41, 41)",
+      "label": "Row 2, column 5, region 5: empty"
+    },
+    {
+      "color": "rgb(40, 83, 54)",
+      "label": "Row 3, column 1, region 3: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 3, column 2, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 3, column 3, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 3, column 4, region 4: marked empty"
+    },
+    {
+      "color": "rgb(36, 66, 96)",
+      "label": "Row 3, column 5, region 1: empty"
+    },
+    {
+      "color": "rgb(96, 66, 36)",
+      "label": "Row 4, column 1, region 2: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 4, column 2, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 4, column 3, region 4: marked empty"
+    },
+    {
+      "color": "rgb(71, 46, 96)",
+      "label": "Row 4, column 4, region 4: marked empty"
+    },
+    {
+      "color": "rgb(36, 66, 96)",
+      "label": "Row 4, column 5, region 1: empty"
+    },
+    {
+      "color": "rgb(96, 66, 36)",
+      "label": "Row 5, column 1, region 2: marked empty"
+    },
+    {
+      "color": "rgb(96, 66, 36)",
+      "label": "Row 5, column 2, region 2: empty"
+    },
+    {
+      "color": "rgb(96, 66, 36)",
+      "label": "Row 5, column 3, region 2: empty"
+    },
+    {
+      "color": "rgb(96, 66, 36)",
+      "label": "Row 5, column 4, region 2: empty"
+    },
+    {
+      "color": "rgb(96, 66, 36)",
+      "label": "Row 5, column 5, region 2: empty"
+    }
+  ]
+}

@@ -1,0 +1,789 @@
+{
+  "url": "https://www.starbattlepuzzles.com/puzzles/size/14x14",
+  "cells": [
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 1, column 1, region 14: star"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 1, column 2, region 14: marked empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 1, column 3, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 1, column 4, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 1, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 6, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 7, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 8, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 9, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 10, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 11, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 12, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 1, column 13, region 9: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 1, column 14, region 1: empty"
+    },
+    {
+      "color": "rgb(238, 211, 238)",
+      "label": "Row 2, column 1, region 13: marked empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 2, column 2, region 14: marked empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 2, column 3, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 2, column 4, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 2, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 2, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 2, column 7, region 14: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 2, column 8, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 2, column 9, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 2, column 10, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 2, column 11, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 2, column 12, region 9: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 2, column 13, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 2, column 14, region 1: empty"
+    },
+    {
+      "color": "rgb(238, 211, 238)",
+      "label": "Row 3, column 1, region 13: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 3, column 2, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 3, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 3, column 4, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 3, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 3, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 3, column 7, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 3, column 8, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 3, column 9, region 9: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 3, column 10, region 7: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 3, column 11, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 3, column 12, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 3, column 13, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 3, column 14, region 1: empty"
+    },
+    {
+      "color": "rgb(238, 211, 238)",
+      "label": "Row 4, column 1, region 13: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 4, column 2, region 14: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 4, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 4, column 4, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 4, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 4, column 6, region 9: empty"
+    },
+    {
+      "color": "rgb(212, 233, 190)",
+      "label": "Row 4, column 7, region 9: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 4, column 8, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 4, column 9, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 4, column 10, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 4, column 11, region 7: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 4, column 12, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 4, column 13, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 4, column 14, region 1: empty"
+    },
+    {
+      "color": "rgb(238, 211, 238)",
+      "label": "Row 5, column 1, region 13: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 5, column 2, region 14: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 5, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 5, column 4, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 5, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 5, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 5, column 7, region 5: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 5, column 8, region 5: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 5, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 5, column 10, region 14: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 5, column 11, region 7: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 5, column 12, region 7: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 5, column 13, region 1: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 5, column 14, region 1: empty"
+    },
+    {
+      "color": "rgb(238, 211, 238)",
+      "label": "Row 6, column 1, region 13: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 6, column 2, region 14: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 6, column 3, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 6, column 4, region 4: empty"
+    },
+    {
+      "color": "rgb(227, 207, 247)",
+      "label": "Row 6, column 5, region 4: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 6, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 6, column 7, region 5: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 6, column 8, region 5: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 6, column 9, region 5: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 6, column 10, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 6, column 11, region 14: empty"
+    },
+    {
+      "color": "rgb(188, 235, 235)",
+      "label": "Row 6, column 12, region 7: empty"
+    },
+    {
+      "color": "rgb(195, 222, 248)",
+      "label": "Row 6, column 13, region 1: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 6, column 14, region 11: empty"
+    },
+    {
+      "color": "rgb(238, 211, 238)",
+      "label": "Row 7, column 1, region 13: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 2, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 3, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 4, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 7, column 7, region 5: empty"
+    },
+    {
+      "color": "rgb(247, 201, 201)",
+      "label": "Row 7, column 8, region 5: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 10, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 7, column 11, region 14: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 7, column 12, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 7, column 13, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 7, column 14, region 11: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 1, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 2, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 3, region 14: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 8, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 5, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 7, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 8, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 8, column 10, region 6: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 8, column 11, region 14: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 8, column 12, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 8, column 13, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 8, column 14, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 9, column 1, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 9, column 2, region 8: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 9, column 3, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 9, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 9, column 5, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 9, column 6, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 9, column 7, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 9, column 8, region 2: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 9, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 9, column 10, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 9, column 11, region 6: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 9, column 12, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 9, column 13, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 9, column 14, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 10, column 1, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 10, column 2, region 8: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 10, column 3, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 10, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 10, column 5, region 12: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 10, column 6, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 10, column 7, region 2: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 10, column 8, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 10, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 10, column 10, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 10, column 11, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 10, column 12, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 10, column 13, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 10, column 14, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 11, column 1, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 11, column 2, region 8: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 11, column 3, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 11, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 11, column 5, region 12: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 11, column 6, region 2: empty"
+    },
+    {
+      "color": "rgb(251, 217, 182)",
+      "label": "Row 11, column 7, region 2: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 11, column 8, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 11, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(250, 235, 158)",
+      "label": "Row 11, column 10, region 6: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 11, column 11, region 11: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 11, column 12, region 10: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 11, column 13, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 11, column 14, region 11: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 12, column 1, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 12, column 2, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 12, column 3, region 8: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 12, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 12, column 5, region 12: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 12, column 6, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 12, column 7, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 12, column 8, region 14: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 12, column 9, region 14: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 12, column 10, region 3: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 12, column 11, region 11: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 12, column 12, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 12, column 13, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 12, column 14, region 10: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 13, column 1, region 8: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 13, column 2, region 8: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 13, column 3, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 13, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 13, column 5, region 12: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 13, column 6, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 13, column 7, region 3: empty"
+    },
+    {
+      "color": "rgb(239, 239, 190)",
+      "label": "Row 13, column 8, region 14: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 13, column 9, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 13, column 10, region 3: empty"
+    },
+    {
+      "color": "rgb(245, 202, 188)",
+      "label": "Row 13, column 11, region 11: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 13, column 12, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 13, column 13, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 13, column 14, region 10: empty"
+    },
+    {
+      "color": "rgb(245, 209, 233)",
+      "label": "Row 14, column 1, region 8: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 14, column 2, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 14, column 3, region 12: empty"
+    },
+    {
+      "color": "rgb(198, 236, 223)",
+      "label": "Row 14, column 4, region 12: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 14, column 5, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 14, column 6, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 14, column 7, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 14, column 8, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 14, column 9, region 3: empty"
+    },
+    {
+      "color": "rgb(192, 237, 207)",
+      "label": "Row 14, column 10, region 3: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 14, column 11, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 14, column 12, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 14, column 13, region 10: empty"
+    },
+    {
+      "color": "rgb(214, 214, 245)",
+      "label": "Row 14, column 14, region 10: empty"
+    }
+  ]
+}
