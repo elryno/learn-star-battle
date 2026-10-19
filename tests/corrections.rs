@@ -7,7 +7,10 @@ use star_battle_solver::{
 };
 use std::time::Duration;
 
-const BUDGET: Duration = Duration::from_secs(5);
+// These tests check correctness, not interactive latency. Leave headroom for
+// unoptimized 14x14 searches on shared CI runners; timeout behavior is tested
+// separately with Duration::ZERO. The app keeps its own eight-second limit.
+const BUDGET: Duration = Duration::from_secs(60);
 
 fn solution(board: &Board) -> Vec<Mark> {
     let SearchResult::Solution(rows) = solve(board, BUDGET) else {

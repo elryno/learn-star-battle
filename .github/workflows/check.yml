@@ -25,7 +25,7 @@ jobs:
         run: bash scripts/check.sh
       - name: Preserve native test evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: native-test-evidence
           path: |
