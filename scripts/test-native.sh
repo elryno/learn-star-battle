@@ -34,7 +34,7 @@ for _ in {1..100}; do
     fi
     if [[ -s "$runtime/display" ]]; then
         export DISPLAY=":$(cat "$runtime/display")"
-        if xdotool getdisplaygeometry >/dev/null 2>&1; then
+        if xdotool getdisplaygeometry >"$output/display-ready.log" 2>&1; then
             display_ready=1
             break
         fi
@@ -43,6 +43,9 @@ for _ in {1..100}; do
 done
 if [[ "$display_ready" != 1 ]]; then
     cat "$output/xvfb.log"
+    printf 'Selected test display: %q\n' "${DISPLAY:-unset}" >&2
+    [[ ! -f "$runtime/display" ]] || od -An -tc "$runtime/display"
+    [[ ! -f "$output/display-ready.log" ]] || cat "$output/display-ready.log"
     printf 'Xvfb did not provide a usable test display within 10 seconds.\n' >&2
     exit 1
 fi
