@@ -6,8 +6,10 @@ root=$PWD
 if [[ $# -gt 0 ]]; then export STAR_BATTLE_TEST_SCALES="$*"; fi
 if [[ ${STAR_BATTLE_WAYLAND_DBUS:-0} != 1 ]]; then
     mkdir -p "$root/artifacts/wayland-review"
+    # Unix socket paths are short; a CI checkout path can already fill the limit.
+    # Keep runtime sockets in /tmp while preserving logs under artifacts/.
     export XDG_RUNTIME_DIR
-    XDG_RUNTIME_DIR=$(mktemp -d "$root/artifacts/wayland-review/runtime.XXXXXX")
+    XDG_RUNTIME_DIR=$(mktemp -d /tmp/starbattle-wayland.XXXXXX)
     export GIO_USE_VFS=local GTK_USE_PORTAL=0
     exec dbus-run-session -- env STAR_BATTLE_WAYLAND_DBUS=1 bash "$root/scripts/test-wayland.sh"
 fi
